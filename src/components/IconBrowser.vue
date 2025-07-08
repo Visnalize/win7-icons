@@ -19,7 +19,7 @@
         </option>
       </select>
       <p>Available icons in the selected location:</p>
-      <ul>
+      <ul class="has-scrollbar">
         <li
           v-for="(icon, i) in icons"
           :key="i"
@@ -30,8 +30,15 @@
         </li>
       </ul>
       <div class="footer">
-        <button :disabled="!selectedIcon" @click="download">Download</button>
-        <button class="default" @click="downloadAll">Download All</button>
+        <div class="actions">
+          <button :disabled="!selectedIcon" @click="download">Download</button>
+          <button class="default" @click="downloadAll">Download All</button>
+        </div>
+
+        <div class="links">
+          A mini project by
+          <a href="https://visnalize.com" target="_blank">Visnalize</a>
+        </div>
       </div>
     </div>
   </div>
@@ -87,9 +94,11 @@ export default {
 };
 </script>
 
-<style scoped src="7.css/dist/gui/button.css"></style>
-<style scoped src="7.css/dist/gui/select.css"></style>
-<style scoped src="7.css/dist/gui/window.css"></style>
+<style src="7.css/dist/gui/button.css"></style>
+<style src="7.css/dist/gui/dropdown.css"></style>
+<style src="7.css/dist/gui/window.css"></style>
+<style src="7.css/dist/gui/scrollbar.css"></style>
+<style src="7.css/dist/gui/typography.css"></style>
 
 <style scoped>
 .window {
@@ -134,7 +143,17 @@ li img {
 
 .footer {
   padding: 12px 0;
-  text-align: right;
+  text-align: center;
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.links {
+  margin-top: 24px;
+  color: #888;
 }
 
 button + button {

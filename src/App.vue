@@ -1,17 +1,14 @@
 <template>
   <div class="wrapper">
-    <google-ads />
     <icon-browser />
-    <google-ads />
   </div>
 </template>
 
 <script>
-import GoogleAds from "./components/GoogleAds.vue";
 import IconBrowser from "./components/IconBrowser.vue";
 
 export default {
-  components: { IconBrowser, GoogleAds },
+  components: { IconBrowser },
 };
 </script>
 
@@ -32,6 +29,6 @@ body {
   height: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
 }
 </style>

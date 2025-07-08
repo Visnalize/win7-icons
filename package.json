@@ -9,7 +9,7 @@
     "deploy": "yarn build && gh-pages -d dist -b deployment"
   },
   "dependencies": {
-    "7.css": "^0.10.0",
+    "7.css": "^0.19.0",
     "@octokit/rest": "^19.0.5",
     "isomorphic-fetch": "^3.0.0",
     "vue": "^2.7.7"
